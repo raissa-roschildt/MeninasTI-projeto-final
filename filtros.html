@@ -1,0 +1,59 @@
+<div class="container">
+    <h1>Filtro de produtos</h1>
+    <input type="text" id="pesquisa" placeholder="Pesquise por nome, valor ou categoria">
+    <section id="produtos"></section>
+  </div>
+  
+  <script>
+  
+  
+  var produtos = [{
+    nome: "camiseta longa",
+    valor: 50,
+    imagem: "https://via.placeholder.com/120",
+    categoria: "camisetas"
+  },
+  {
+    nome: "camiseta curta",
+    valor: 50,
+    imagem: "https://via.placeholder.com/120",
+    categoria: "camisetas"
+  },
+  {
+    nome: "calça longa",
+    valor: 50,
+    imagem: "https://via.placeholder.com/120",
+    categoria: "calças"
+  }
+  ];
+  
+  function pesquisar() {
+    var pesquisa = document.getElementById("pesquisa").value;
+  
+    var produtosFiltrados = produtos.filter(produto => {
+      return produto.nome.toLowerCase().includes(pesquisa.toLowerCase()) ||
+        produto.valor.toString().toLowerCase().includes(pesquisa.toLowerCase()) ||
+        produto.categoria.toLowerCase().includes(pesquisa.toLowerCase());
+    });
+    if (!pesquisa) {
+      produtosFiltrados = produtos;
+    }
+    var html = "";
+    produtosFiltrados.forEach(produto => {
+      html += `
+        <div>
+          <img src="${produto.imagem}">
+          <p>${produto.nome}</p>
+          <p>R$ ${produto.valor}</p>
+        </div>
+      `;
+    });
+  
+    document.getElementById("produtos").innerHTML = html;
+  }
+  
+  document.getElementById("pesquisa").addEventListener("input", pesquisar);
+  
+  pesquisar();
+  
+  </script>

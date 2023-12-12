@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="PT_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meninas TI Projeto Final</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mina&family=Smooch&family=Yellowtail&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="objetos.js" defer></script>
+</head>
+
+<style>
+    body{ background-color:#ffdbae;}
+    section#login form {
+        display: flex;
+        flex-direction: column;
+        gap: 0rem;
+    }
+    
+    section#login {
+        left: 28vw;
+        background: rgb(255, 219, 174);
+        padding: 35px;
+    }
+    .cursor-pointer {
+        cursor: pointer;
+    }
+</style>
+<body>
+    <header id="meuheader" class="col d-flex justify-content-around align-items-center py-1 px-0 header">
+        <div class="logo"><img src="TJ ateliê logo minimalista verde musgo e caramelo (1).png"/></div>
+        <div class="menu"><nav>
+            <ul>
+                <li><a href="#" >Home</a></li>
+                <li><a href="#sobre" >Sobre</a></li>
+            
+                <li><a href="#livros" >Livros</a></li>
+                <li><a href="#artigos" >Artigos</a></li>
+                <li class="cursor-pointer" onclick="document.getElementById('login').classList.toggle('d-flex'); document.getElementById('login').classList.toggle('d-none');">Login</li>
+                <li><a href="#contato " >Contato</a></li>
+            </ul>
+        </nav></div>
+        <div class="social col col-md-2">
+            <ul>
+                <li><a href="#" ><img src="instagram.png"></a></li>
+                <li><a href="#" ><img src="facebook.png"></a></a></li>
+                <li><a href="#" ><img src="sinal-do-twitter.png"></a></i></a></li>
+            </ul>
+        </div>
+    </header>
+    <section class="banner">
+        <div class="conteudo">
+            <h2>Acervo de Livros</h2>
+            <p></p>
+        </div>
+        <div class="botao"> <a href="#livros"> Clique aqui</a></div>
+    </section>
+    <section class="sobre" id="sobre">
+        <div class="imagem">
+            <img src="gif.gif"/>
+        </div>
+
+        <div class="conteudo"> 
+        <h2>Sobre o site</h2>
+            <p>Bibliotecas digitais são repositórios online de recursos educacionais, documentos e mídia, proporcionando acesso fácil e rápido a uma vasta gama de informações. Sua importância reside na democratização do conhecimento, facilitando a pesquisa, o aprendizado e a preservação de obras para as gerações futuras.</p>
+    </section>
+    <div class="container">
+        <h1>Filtro de produtos</h1>
+        <input type="text" id="pesquisa" placeholder="Pesquise por nome, valor ou categoria">
+      </div>
+    <section class="livros-btn col d-flex justify-content-center mx-auto">
+        <button class="botao-livros cursor-pointer mx-auto" onclick="document.getElementById('livros').classList.toggle('active');">Abrir Livros</button>
+    </section>
+    <section class="produtos" id="livros">
+    </section>
+    <section class="col d-flex justify-content-center mx-auto p-2">
+        <button class="botao-artigos cursor-pointer mx-auto" onclick="document.getElementById('artigos').classList.toggle('active');">Abrir Artigos</button>
+    </section>
+    <section id="artigos" class="jumbotron artigos col d-flex flex-row flex-wrap">
+
+        <div class="banner-pequeno links d-flex flex-column">
+            <h3> Psicanálise e análise do discurso</h3>
+            <div class="botao"><a href="Psicanálise/ Psicanálise e análise do discurso - Marlene Guirado.pdf" download>Baixe Aqui</a></div>
+        </div>
+    </section>
+    
+    
+    <section class="formulario" id="contato">
+        <h3>Entre em contato</h3>
+        <p>Preencha o formulario abaixo</p>
+        <form action="" id="form">
+            <input type="text" placeholder="Seu nome" name="nome" id="nome"/>
+            <input type="tel" placeholder="Seu telefone" name="telefone" id="telefone"/>
+           <!--<input type="pessword" placeholder="senha" />
+            <input type="url" placeholder="url" />
+            <input type="datetime" placeholder="data-hora" />
+            -->
+            <input type="submit" value="Enviar" id="enviar" />
+        </form>
+    </section>
+
+
+    
+    <footer>
+        <div class="espacamento"> &nbsp;</div>
+        <div class="footer-interno">
+            <div class="footer-coluna-1 footer-coluna">
+                <img src="TJ ateliê logo minimalista verde musgo e caramelo (1).png"/>
+                <p>C 2023</p>
+            </div>
+            <div class="footer-coluna-2 footer-coluna">
+                <ul>
+                    <li class="titulo">Principal</li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#livros">Livros</a></li>
+                    <li><a href="#artigos"> Artigos</a></li>
+            
+                    <li><a href="contato">Contato</a> </li>
+
+                </ul></div>
+          
+    </footer>
+<section id="login" class="col-5 d-none justify-content-evenly flex-column gap-2 position-fixed top-50">
+    <h2>Login</h2>
+    <form id="login">
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" required><br>
+        <label for="password">Senha:</label>
+        <input type="password" id="password" required><br>
+        <button type="button" onclick="login()">Login</button>
+    </form>
+</section>
+    <script src="script.js"></script>
+
+    <script>
+            window.onscroll = function(){minhafuncao()};
+            var header = document.getElementById("meuheader");
+            var logo = document.querySelector("#meuheader .logo img");
+            var sticky = header.offsetTop;
+                function minhafuncao(){
+                    if((window.pageYOffset > sticky)){
+                        header.classList.add("sticky");
+                        logo.classList.add("sticky");
+                    }
+                    else{
+                        header.classList.remove("sticky");
+                        logo.classList.remove("sticky");
+                    }
+                }
+
+                
+    </script>
+    <script>
+        // Array de usuários (apenas para fins de exemplo - armazene de forma segura em um servidor real)
+    const users = [
+        { username: 'user', password: 'senha' },
+        { username: 'user2', password: 'senha2' }
+    ];
+
+    // Função para realizar o login
+    function login() {
+        const usernameInput = document.getElementById('username').value;
+        const passwordInput = document.getElementById('password').value;
+
+        // Verificar se as credenciais estão corretas
+        const user = users.find(u => u.username === usernameInput && u.password === passwordInput);
+
+        if (user) {
+            // Armazenar informações de login em um cookie (ou use sessionStorage)
+            document.cookie = `username=${user.username}; path=/`;
+
+            // Redirecionar para a página do painel
+            window.location.href = 'dashboard.html';
+        } else {
+            alert('Falha no login. Por favor, verifique seu usuário e senha.');
+        }
+    }
+
+    // Função para verificar se o usuário está autenticado ao acessar o dashboard
+    function checkAuth() {
+        const username = getCookie('username');
+
+        if (!username) {
+            // Redirecionar para a página de login se não houver cookie
+            window.location.href = 'index.html';
+        }
+    }
+
+    // Função para obter o valor de um cookie pelo nome
+    function getCookie(name) {
+        const cookies = document.cookie.split(';').map(cookie => cookie.trim());
+        const cookie = cookies.find(c => c.startsWith(`${name}=`));
+
+        return cookie ? cookie.split('=')[1] : null;
+    }
+    function logout() {
+        // Excluir o cookie
+        document.cookie = 'username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+
+        // Redirecionar para a página de login
+        window.location.href = 'index.html';
+    }
+    // Verificar autenticação ao carregar a página do dashboard
+    
+    </script>
+</body>
+</html>
